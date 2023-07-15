@@ -59,4 +59,4 @@ class BaseModel:
         # Added the other attributes of this instance.
         obj_dict["__class__"] = type(self).__name__
         obj_dict["created_at"] = obj_dict["created_at"].isoformat()
-        obj_dict["updated_at"] = obj_dict["uodated_at"].isoformat()
+        obj_dict["updated_at"] = obj_dict["updated_at"].isoformat()
