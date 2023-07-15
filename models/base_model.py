@@ -18,7 +18,8 @@ class BaseModel:
 
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
-        self.updated_at = self.created_at 
+        self.updated_at = self.created_at #We were asked to assign this with the current datetime. SO in that regards, it I think self.updated_at should be equal to datetime.now()
+        #self.updated_at = datetime.now() #This is what I mean
 
 
     def __str__(self):
@@ -35,7 +36,10 @@ class BaseModel:
 
     def to_dict(self):
         """
-            Returns a dictionary containing all values of __dict__
+            Returns a dictionary containing all keys/values of __dict__
         """
         obj_dict = self.__dict__.copy()
-        
+        #Added the other attributes of this instance.
+        obj_dict["__class__"] = type(self).__name__
+        obj_dict["created_at"] = obj_dict["created_at"].isoformat("%Y-%m-%dT%H:%M:%S.%f")
+        obj_dict["updated_at"] = obj_dict["uodated_at"].isoformat("%Y-%m-%dT%H:%M:%S.%f")
