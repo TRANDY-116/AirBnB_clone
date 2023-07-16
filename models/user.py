@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 """
-    Subclass of BaseModel
+    Subclass of BaseModel: User class
 """
-# import
+from models.base_model import BaseModel
+
 
 class User(BaseModel):
     """
-        User class that inherits from Basemodel
+        Class of User Objects
     """
 
-    def __init__(s
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""
+    
 
