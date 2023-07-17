@@ -8,8 +8,9 @@ import os
 
 
 class FileStorage:
-    """ 
-        Class that serializes instances to json file and deserializes json files to instances
+    """
+        Class that serializes instances to json file and
+        deserializes json files to instances
     """
 
     __file_path = "file.json"
@@ -20,7 +21,7 @@ class FileStorage:
             To return the dictionary objects
         """
         return FileStorage.__objects
-    
+
     def new(self, obj):
         """
            sets in __objects the obj with key <obj class name>.id

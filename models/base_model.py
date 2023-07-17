@@ -41,7 +41,7 @@ class BaseModel:
         """
             Return string representation of BaseModel class
         """
-        return ("[{}] ({}) {}".\
+        return ("[{}] ({}) {}".
                 format(self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
