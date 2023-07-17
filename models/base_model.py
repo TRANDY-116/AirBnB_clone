@@ -41,7 +41,7 @@ class BaseModel:
         """
             Return string representation of BaseModel class
         """
-        return ("[{}] ({}) {}".
+        return ("[{}] ({}) {}".\
                 format(self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
@@ -60,3 +60,4 @@ class BaseModel:
         obj_dict["__class__"] = type(self).__name__
         obj_dict["created_at"] = obj_dict["created_at"].isoformat()
         obj_dict["updated_at"] = obj_dict["updated_at"].isoformat()
+        return obj_dict

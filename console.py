@@ -2,7 +2,8 @@
 """
    Command interpreter
 """
-import cmd, sys
+import cmd
+import sys
 
 
 class HBNBCommand(cmd.Cmd):
